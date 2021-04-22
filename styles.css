@@ -196,10 +196,11 @@ body {
 }
 
 .nav {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .nav-menu {
@@ -241,32 +242,43 @@ header {
     color: white;
 }
 
-.work figure img:nth-child(4) {
-    width: 50rem;
-    height: 50rem;
+.first-row {
+    display: flex;
 }
 
-.work figure img:nth-child(3) {
-    border: 2px solid red;
-    width: 50rem;
+.second-row {
+    display: flex;
+}
+
+.work div:nth-child(1) {
+    border: red 2px solid;
 }
 
 .work figure {
-    margin: 1rem;
+    margin: 2rem;
     object-fit: cover;
-    width: 25rem;
-    height: 25rem;
 }
 
 .work {
     color: #3693D6;
     padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-me p {
+    margin: 0 5rem;
 }
 
 .about-me {
     background-color: #3693D6;
     padding: 5rem;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonial img {
@@ -287,8 +299,39 @@ footer {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 
 .nav-link {
     color: white;
 }
+
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up) */
+
+
+/* @media (min-width: 576px) {
+    ...
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    ...
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    ...
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    ...
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    ...
+} */
