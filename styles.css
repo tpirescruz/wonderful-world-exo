@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato&display=swap');
+
+/* Set root font-size @10px equivalent */
+
+html {
+    font-size: .625em;
+    /* fallback IE8+ */
+    font-size: calc(1em * .625);
+    /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+    scroll-behavior: smooth;
+}
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove focus for mouse users */
+
+ :focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    color: #000;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Remove default padding */
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Make medias easier to work with */
+
+img,
+video,
+audio {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Set cursor pointer */
+
+label[for],
+button,
+input[type="submit"],
+select {
+    cursor: pointer;
+}
+
+
+/* Remove font style on address */
+
+address {
+    font-style: normal;
+}
+
+
+/* Remove all animations and transitions for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+    position: absolute;
+    white-space: nowrap;
+}
+
+
+/* Image replacement technique 2012 H5BP  - https://css-tricks.com/the-image-replacement-museum/ */
+
+.ir {
+    font: 0/0 a;
+    color: transparent;
+    border: 0;
+    text-shadow: none;
+}
+
+
+/* Phone links active only under 36em (576px) */
+
+a[href^="tel"] {
+    white-space: nowrap;
+    pointer-events: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 36em) {
+    a[href^="tel"] {
+        pointer-events: auto;
+        text-decoration: underline;
+    }
+}
+
+
+/* Print external URLs */
+
+@media print {
+    a {
+        text-decoration: underline;
+    }
+    a[href]:not([href^='#'])::after {
+        content: '('attr(href)')';
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+body {
+    font-family: 'Lato';
+    text-align: center;
+}
+
+.nav img {
+    width: 30rem;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-item {
+    margin: 1rem;
+}
+
+h1 {
+    font-family: 'Calligraffitti';
+    color: white;
+    font-size: 9rem;
+    transform: rotate(351deg);
+    filter: drop-shadow(0 3px 6px #0000004D);
+}
+
+h2 {
+    margin: 2rem;
+}
+
+header {
+    height: 100vh;
+    background-image: url(/ressources/Photo\ montagnes.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+.work-btn {
+    background-color: #3693D6;
+    padding: 1rem;
+    border-radius: 50px;
+    color: white;
+}
+
+.work figure img:nth-child(4) {
+    width: 50rem;
+    height: 50rem;
+}
+
+.work figure img:nth-child(3) {
+    border: 2px solid red;
+    width: 50rem;
+}
+
+.work figure {
+    margin: 1rem;
+    object-fit: cover;
+    width: 25rem;
+    height: 25rem;
+}
+
+.work {
+    color: #3693D6;
+    padding: 5rem;
+}
+
+.about-me {
+    background-color: #3693D6;
+    padding: 5rem;
+    color: white;
+}
+
+.testimonial img {
+    margin: auto;
+}
+
+.testimonial {
+    padding: 5rem;
+    color: #3693D6;
+}
+
+footer div {
+    text-align: left;
+}
+
+footer {
+    background-color: #3693D6;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    color: white;
+}
