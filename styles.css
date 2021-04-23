@@ -1,186 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato&display=swap');
-
-/* Set root font-size @10px equivalent */
-
-html {
-    font-size: .625em;
-    /* fallback IE8+ */
-    font-size: calc(1em * .625);
-    /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
-    scroll-behavior: smooth;
-}
-
-
-/* Box sizing rules */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-/* Remove focus for mouse users */
-
- :focus:not(:focus-visible) {
-    outline: none;
-}
-
-
-/* Set core body defaults */
-
-body {
-    min-height: 100vh;
-    font-size: 1.6rem;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    color: #000;
-}
-
-
-/* Remove default margin */
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
-
-
-/* Remove default padding */
-
-ul[class],
-ol[class] {
-    padding: 0;
-}
-
-
-/* Remove list styles on ul, ol elements with a class attribute */
-
-ul[class],
-ol[class] {
-    list-style: none;
-}
-
-
-/* A elements that don't have a class get default styles */
-
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-
-/* Make medias easier to work with */
-
-img,
-video,
-audio {
-    max-width: 100%;
-    display: block;
-    height: auto;
-}
-
-
-/* Inherit fonts for inputs and buttons */
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-
-/* Set cursor pointer */
-
-label[for],
-button,
-input[type="submit"],
-select {
-    cursor: pointer;
-}
-
-
-/* Remove font style on address */
-
-address {
-    font-style: normal;
-}
-
-
-/* Remove all animations and transitions for people that prefer not to see them */
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-
-/* Text meant only for screen readers. */
-
-.screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    width: 1px;
-    position: absolute;
-    white-space: nowrap;
-}
-
-
-/* Image replacement technique 2012 H5BP  - https://css-tricks.com/the-image-replacement-museum/ */
-
-.ir {
-    font: 0/0 a;
-    color: transparent;
-    border: 0;
-    text-shadow: none;
-}
-
-
-/* Phone links active only under 36em (576px) */
-
-a[href^="tel"] {
-    white-space: nowrap;
-    pointer-events: none;
-    text-decoration: none;
-    color: inherit;
-}
-
-@media (max-width: 36em) {
-    a[href^="tel"] {
-        pointer-events: auto;
-        text-decoration: underline;
-    }
-}
-
-
-/* Print external URLs */
-
-@media print {
-    a {
-        text-decoration: underline;
-    }
-    a[href]:not([href^='#'])::after {
-        content: '('attr(href)')';
-    }
-}
-
 a {
     color: inherit;
     text-decoration: inherit;
@@ -189,13 +7,14 @@ a {
 body {
     font-family: 'Lato';
     text-align: center;
+    list-style: none;
 }
 
-.nav img {
+.navigation img {
     width: 30rem;
 }
 
-.nav {
+.navigation {
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -203,12 +22,17 @@ body {
     margin: 0 auto;
 }
 
-.nav-menu {
+.nav-container {
     display: flex;
 }
 
-.nav-item {
-    margin: 1rem;
+.nav-items {
+    margin: 1rem 3rem;
+    font-size: 2rem;
+}
+
+.btn-outline-light {
+    padding: 0rem 2rem;
 }
 
 h1 {
@@ -232,12 +56,12 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
+    padding: 4rem;
 }
 
 .work-btn {
     background-color: #3693D6;
-    padding: 1rem;
+    padding: 1rem 4rem;
     border-radius: 50px;
     color: white;
 }
@@ -296,10 +120,29 @@ footer div {
 
 footer {
     background-color: #3693D6;
-    padding: 2rem;
+    padding: 5rem;
     display: flex;
     justify-content: space-between;
     color: white;
+    flex-wrap: wrap;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+}
+
+.logo img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem;
 }
 
 .nav-link {
@@ -311,27 +154,28 @@ footer {
 // No media query for `xs` since this is the default in Bootstrap
 // Small devices (landscape phones, 576px and up) */
 
+@media (max-width: 576px) {}
 
-/* @media (min-width: 576px) {
-    ...
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {
+    .nav-container {
+        display: none;
+    }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    ...
-}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    ...
-}
+/* // Large devices (desktops, 992px and up) */
 
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    ...
-}
+@media (max-width: 992px) {}
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
-    ...
-} */
+
+/* // X-Large devices (large desktops, 1200px and up) */
+
+@media (max-width: 1200px) {}
+
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+
+@media (max-width: 1400px) {}
